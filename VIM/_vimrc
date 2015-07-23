@@ -1,0 +1,24 @@
+"colo desert
+syntax on "打开代码颜色
+set guifont=Monaco:h15:cANSI
+set number
+"保存用编码
+set fileencoding=utf-8
+"解析用编码顺序表
+set fileencodings=utf-8,cp936
+"vim内部编码
+set encoding=cp936
+"vundle配置
+set nocompatible  "关闭vi模式
+filetype off "关闭文件类型检测
+set rtp+=~/.vim/bundle/Vundle.vim "运行时路径
+call vundle#begin()	"初始化
+Plugin 'gmarik/Vundle.vim' "让vundle自己管理vundle
+"vundle插件列表
+
+Plugin 'altercation/vim-colors-solarized' "颜色主题solarized
+"Plugin 'bling/vim-airline'  " 1.airline状态栏插件
+call vundle#end()  "vundle结束
+filetype plugin indent on  "开启文件类型缩进
+set background=dark
+colo solarized
