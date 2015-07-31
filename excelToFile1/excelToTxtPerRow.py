@@ -15,4 +15,4 @@ for line in reader:
 	f.close()
 	#print type(line)
 csvfile.close() 
-
+raw_input()

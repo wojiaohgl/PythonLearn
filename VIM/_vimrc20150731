@@ -1,0 +1,56 @@
+"colo desert
+syntax on 
+set guifont=Monaco:h15:cANSI
+set number
+"set fileencoding=utf-8
+"set fileencodings=utf-8,cp936,latin1
+"set encoding=cp936
+set encoding=utf-8
+set fileencodings=utf-8,chinese,latin-1
+if has("win32")
+set fileencoding=chinese
+else
+set fileencoding=utf-8
+endif
+"解决菜单乱码
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+"解决consle输出乱码
+language messages zh_CN.utf-8
+
+
+"vundle
+set nocompatible  
+filetype off 
+set rtp+=~/.vim/bundle/Vundle.vim 
+call vundle#begin()	
+Plugin 'gmarik/Vundle.vim' 
+"vundle lists
+"
+"Plugin 'scrooloose/syntastic' 
+Plugin 'vim-scripts/matrix.vim--Yang' 
+Plugin 'Valloric/YouCompleteMe',{'pinned': 1} 
+Plugin 'altercation/vim-colors-solarized' 
+"Plugin 'bling/vim-airline'  
+call vundle#end()  
+filetype plugin indent on  
+set background=dark
+colo solarized
+
+
+
+
+"YCM
+let g:ycm_seed_identifiers_with_syntax=1
+"Syntastic
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"
+"set vbs=4
+nmap <F10> <ESC>:!python %<CR>
